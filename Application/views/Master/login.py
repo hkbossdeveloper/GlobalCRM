@@ -18,7 +18,6 @@ def login():
         if request.method == "POST":
             username = request.form['user_email']
             passwords = request.form['user_pass']
-            
             total_count = db.Master.find({"Email":username}).count()
             if total_count == 0:
                 flash("USERNAME NOT FOUND","error")

@@ -12,6 +12,7 @@ db = client.GlobalCRM
 
 @app.route('/Master/Dashboard/Employees/Section')
 def Mas_emp():
+    print("SESSION IS CREATE " + session['MasterEmail'])
     if 'MasterEmail' in session:
         pageContent = {
             'title' : 'EMPLOYEES -- GLOBAL GATEWAY CRM'
@@ -29,6 +30,7 @@ def Mas_emp():
 
 @app.route('/Master/Dashboard/Employees/List')
 def emp_list():
+    print("SESSION IS CREATE " + session['MasterEmail'])
     if 'MasterEmail' in session:
         pageContent = {
             'title' : 'EMPLOYEES -- GLOBAL GATEWAY CRM'
@@ -52,6 +54,7 @@ def emp_list():
 
 @app.route('/Master/Dashboard/Employee/Create',methods=['POST'])
 def Mas_emp_create():
+    print("SESSION IS CREATE " + session['MasterEmail'])
     if request.method == 'POST':
         mycount = db.Employees.find().count()
         identity_card = request.files['emp_pro_img']
@@ -95,7 +98,7 @@ def Mas_emp_create():
 
 @app.route('/Master/Dashboard/Department/Create',methods=["GET","POST"])
 def create_depar():
-
+    print("SESSION IS CREATE " + session['MasterEmail'])
     pageContent = {
                 'title' : 'Departments -- GLOBAL GATEWAY CRM'
             }
@@ -137,7 +140,7 @@ def create_depar():
 
 @app.route('/Master/Dashboard/Employee/<ID>')
 def em_profile(ID):
-    
+    print("SESSION IS CREATE " + session['MasterEmail'])
     pageContent = {
                 'title' : 'Profile -- GLOBAL GATEWAY CRM'
     }
@@ -154,6 +157,7 @@ def em_profile(ID):
 
 @app.route('/Master/Dashboard/Employee/Lead/Create/<ids>/<name>')
 def lead_create(ids,name):
+    print("SESSION IS CREATE " + session['MasterEmail'])
     pageContent = {
             'title' : 'Leads -- GLOBAL GATEWAY CRM'
     }
@@ -168,6 +172,7 @@ def lead_create(ids,name):
 
 @app.route('/Master/Dashboard/Employee/Lead/List')
 def lead_list():
+    print("SESSION IS CREATE " + session['MasterEmail'])
     pageContent = {
             'title' : 'Lead List -- GLOBAL GATEWAY CRM'
     }
@@ -182,6 +187,7 @@ def lead_list():
 
 @app.route('/Master/Dashboard/Employee/Lead/Set', methods=["POST"])
 def lead_set():
+    print("SESSION IS CREATE " + session['MasterEmail'])
     if 'MasterEmail' in session:
         worktodo = request.form['leads']
         priority = request.form['pr']
@@ -208,6 +214,7 @@ def lead_set():
 
 @app.route('/Master/Dashboard/Employee/<delete_id>/Delete')
 def del_emp(delete_id):
+    print("SESSION IS CREATE " + session['MasterEmail'])
     if 'MasterEmail' in session:
 
         if db.Employees.find_one_and_delete({"_id": ObjectId(delete_id)}):
@@ -221,6 +228,7 @@ def del_emp(delete_id):
 
 @app.route('/Master/Dashboard/Employee/Attendence')
 def set_att():
+    print("SESSION IS CREATE " + session['MasterEmail'])
     pageContent = {
             'title' : 'Attendace -- GLOBAL GATEWAY CRM'
     }
@@ -251,6 +259,7 @@ def set_att():
 
 @app.route('/Master/Dashboard/Employee/Attendence/Create', methods=["POST"])
 def set_create():
+    print("SESSION IS CREATE " + session['MasterEmail'])
     if request.method == "POST":
         selected_emp = request.form['sel_emp']
         option= request.form['sel_opt']

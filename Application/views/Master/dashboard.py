@@ -13,7 +13,7 @@ def Mas_dash():
         pageContent = {
             'title' : 'GLOBAL GATEWAY CRM'
         }
-        print(session['MasterEmail'])
+        print("SESSION IS CREATE " + session['MasterEmail'])
         name = db.Master.find_one({'Email':session['MasterEmail']})
         total_emp = db.Employees.find().count()
         pageContent['Name'] = name.get('Name')
