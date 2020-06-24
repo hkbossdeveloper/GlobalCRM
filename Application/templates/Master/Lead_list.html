@@ -1,0 +1,93 @@
+{% extends '/Master/Base_Master.html' %}
+{% block title  %} {{ pageContent.title }} {% endblock %}
+{% block content %}
+
+<div class="container-fluid" style="margin-top: 2%;">
+
+    {% with errors = get_flashed_messages(category_filter=["error"]) %}
+    {% if errors %}
+    <div class="alert alert-dismissible alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading">Warning!</h4>
+        {%- for msg in errors %}
+        <li>{{ msg }}</li>
+        {% endfor -%}
+      </div>
+
+    {% endif %}
+    {% endwith %}
+    {% with errors = get_flashed_messages(category_filter=["success"]) %}
+    {% if errors %}
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Well done!</strong>
+        {%- for msg in errors %}
+        <li>{{ msg }}</li>
+        {% endfor -%}
+      </div> 
+    {% endif %}
+    {% endwith %}
+  
+    <h1>Leads To Employees</h1>
+    <table class="table">
+        <thead>
+            <th>Date</th>
+            <th>Lead</th>
+            <th>Employees</th>
+            <th>Priority</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            {% for x in pageContent.LEAD %}
+                <tr>
+                    <td>{{ x.Created }}</td>
+                    <td>{{ x.Emp_work }}</td>
+                    <td>{{ x.Emp_Name }}</td>
+                    <td>{{ x.Priority }}</td>
+                    <td>{{ x.Status }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="margin-top: 2%; margin-bottom:2%"></div>
+    <h1>Complete Leads</h1>
+    <table class="table">
+        <thead>
+            <th>Date</th>
+            <th>Lead</th>
+            <th>Employees</th>
+            <th>Priority</th>
+            <th>Time Giving</th>
+            <th>Time Completed</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            {% for y in pageContent.LEAD_COMP %}
+                <tr>
+                    <td>{{ y.Created }}</td>
+                    <td>{{ y.Emp_work }}</td>
+                    <td>{{ y.Emp_Name }}</td>
+                    <td>{{ y.Priority }}</td>
+                    <td>{{ y.Created_time }}</td>
+                    <td>{{ y.Complete_time }}</td>
+                    <td>{{ y.Status }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="margin-top: 2%; margin-bottom:2%"></div>
+    <h1>Cancelled Leads</h1>
+    <table class="table">
+        <thead>
+            <th>Date</th>
+            <th>Lead</th>
+            <th>Employees</th>
+            <th>Priority</th>
+            <th>Reason To Cancelled</th>
+            <th>Status</th>
+        </thead>
+    </table>
+</div>
+
+
+{% endblock %}

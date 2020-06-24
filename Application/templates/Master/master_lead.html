@@ -1,0 +1,41 @@
+{% extends '/Master/Base_Master.html' %}
+{% block title  %} {{ pageContent.title }} {% endblock %}
+{% block content %}
+
+<div class="container-fluid" style="margin-top: 2%;">
+
+    
+  
+    <h1>Send Lead To Employees</h1>
+                <form action="/Master/Dashboard/Employee/Lead/Set" method="post">
+                    <div class="form-group">
+                        <label>Select Employee</label>
+                        <select class="form-control" required name="selected_emp">
+                            <option >Select Employee</option>
+                            <option value="{{ pageContent.Setid }}" selected>{{ pageContent.Setname }}</option>
+                            {% for x in pageContent.EMP %}
+                                <option value="{{ x._id }}">{{ x.Name }}</option>
+                            {% endfor %}
+                          
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Task</label>
+                        <textarea name="leads"  class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select class="form-control" name="pr">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-info ">Create Lead</button>
+                    </div>
+                </form>
+</div>
+
+
+{% endblock %}

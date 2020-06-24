@@ -1,0 +1,132 @@
+{% extends '/Master/Base_Master.html' %}
+{% block title  %} {{ pageContent.title }} {% endblock %}
+{% block content %}
+
+<div class="container-fluid" style="margin-top: 2%;">
+
+  
+        <div class="com-sm-12 col-md-12">
+          <div class="row">
+              <div class="col-sm-12 col-md-4">
+                  <center>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+                        <div class="card-header">Employees</div>
+                        <div class="card-body">
+                          <h1>{{ pageContent.EmployeeS }}</h1>
+                          <a href="/Master/Dashboard/Employees/List"><button class="btn btn-success">LIST</button></a>
+                        </div>
+                    </div>
+               
+                  </center>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <center>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+                        <div class="card-header">Departments</div>
+                        <div class="card-body">
+                          <h1>{{ pageContent.DE_COUNT }}</h1>
+                          <a href="/Master/Dashboard/Department/Create"><button class="btn btn-success">LIST</button></a>
+                        </div>
+                    </div>
+                  </center>
+              </div>
+             
+          </div>
+        </div>
+
+        <div class="com-sm-12 col-md-12" style="margin-top: 2%;">
+            <h1>Actions</h1>
+            <table class="table">
+                <thead>
+                    <th>Create Employee</th>
+                    <th>Create Department</th>
+                    <th>Attendance</th>
+                    <th>Leads</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button class="btn btn-warning btn-block btn-lg" data-toggle="modal" data-target="#myModal">Create</button>
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog modal-xl">
+                                  <div class="modal-content">
+                              
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                      <h4 class="modal-title">Create Employee</h4>
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                              
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                      <form action="/Master/Dashboard/Employee/Create" method="post" enctype="multipart/form-data">
+                                        
+                                          <div class="form-group">
+                                                <label>Name</label>
+                                                <input type="text" name="emp_name" class="form-control"  required/>
+                                          </div>
+                                          <div class="form-group">
+                                            <label>Identity</label>
+                                            <input type="text" name="emp_id" class="form-control" required/>
+                                          </div>
+                                          <div class="form-group">
+                                            <label>Cell</label>
+                                            <input type="text" name="emp_cell" class="form-control" required/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="email" name="emp_email" class="form-control" required/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <input type="text" name="emp_city" class="form-control"  required/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Address</label>
+                                                <textarea name="emp_address"  class="form-control" required></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="text" name="emp_pass" class="form-control" required/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Select Department</label>
+                                                <select class="form-control" name="emp_dep" required>
+                                                    <option>Select Department</option>
+                                                    {% for depart in pageContent.departs %}
+                                                        <option value="{{ depart.Main_ID }}">{{ depart.title }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Upload Profile Image</label>
+                                                <input type="file" name="emp_pro_img" class="form-control" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" name="submit" class="btn btn-danger" value="Create" />
+                                            </div>
+                                      </form>
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </td>
+                        <td>
+                            <a href="/Master/Dashboard/Department/Create"><button class="btn btn-primary btn-lg btn-block">Create</button></a>
+                        </td>
+                        <td><a href="/Master/Dashboard/Employee/Attendence"><button class="btn btn-info btn-block btn-lg">Set</button></a></td>
+                        <td><a href="/Master/Dashboard/Employee/Lead/List"><button class="btn btn-dark btn-block btn-lg">List</button></a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+
+</div>
+
+
+{% endblock %}
