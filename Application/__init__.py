@@ -1,6 +1,6 @@
 from flask import Flask
 app = Flask(__name__)
-app.config.from_object('config.ProductionConfig')
+app.config.from_object('config.DevelopmentConfig')
 
 
 from Application.views.Master import login , dashboard , employee

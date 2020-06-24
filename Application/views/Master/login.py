@@ -9,28 +9,29 @@ db = client.GlobalCRM
 
 
 
-@app.route('/')
-@app.route('/Master/login',methods=['POST'])
+@app.route('/',methods=['POST','GET'])
+@app.route('/Master/login',methods=['POST','GET'])
 def login():
     if 'MasterEmail' in session:
         return redirect('/Master/Dashboard')
     else:
         if request.method == "POST":
-            data = request.get_json()
-            print(data.get('email'))
-            total_count = db.Master.find({"Email":data.get("email")}).count()
-            print(total_count)
+            username = request.form['user_email']
+            passwords = request.form['user_pass']
+            
+            total_count = db.Master.find({"Email":username}).count()
             if total_count == 0:
-                res = make_response(jsonify({"error":"Email Not Found"}),404)
-                return res
+                flash("USERNAME NOT FOUND","error")
+                return redirect('/')
             else:
-                check_pass  = db.Master.find_one({"Email":data.get("email")})
-                if data.get('pass') == check_pass.get('password'):
-                    session['MasterEmail'] = data.get("email")
+                check_pass  = db.Master.find_one({"Email":username})
+                result = check_pass.get('password')
+                if passwords == result:
+                    session['MasterEmail'] = username
                     return redirect('/Master/Dashboard')
                 else:
-                    res = make_response(jsonify({"error":"Pass Not Match"}),404)
-                    return res
+                    flash("PASSWORD  NOT CORRECT ","error")
+                    return redirect('/')
         else:
             pageContent = {
                 'title' : 'GLOBAL GATEWAY CONSULT'
