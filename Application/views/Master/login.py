@@ -27,8 +27,7 @@ def login():
                 check_pass  = db.Master.find_one({"Email":data.get("email")})
                 if data.get('pass') == check_pass.get('password'):
                     session['MasterEmail'] = data.get("email")
-                    res = make_response(jsonify({"message":"Password Match"}),200)
-                    return res
+                    return redirect('/Master/Dashboard')
                 else:
                     res = make_response(jsonify({"error":"Pass Not Match"}),404)
                     return res
