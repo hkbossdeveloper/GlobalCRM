@@ -2,7 +2,7 @@ import os
 class Config(object):
     DEBUG = False
     TESTING = False
-    SECRET_KEY  = "KeyMissMe"
+    SECRET_KEY  = "KeyMisMe"
     SESSSION_COOKIE_SECURE = True
 
 class ProductionConfig(Config):
@@ -11,7 +11,7 @@ class ProductionConfig(Config):
 class DevelopmentConfig(Config):
     DEBUG = True
     ENV = 'development'
-    SECRET_KEY  = "KeyMissMe"
+    SECRET_KEY  = "KeyMisMe"
     SESSSION_COOKIE_SECURE = True
 
 
