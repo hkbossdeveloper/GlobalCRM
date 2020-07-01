@@ -1,13 +1,9 @@
 from Application import app
 from flask import render_template , url_for , request ,jsonify, session , flash ,make_response,redirect
-from pymongo import MongoClient
-import json
 
 
-
-
-@app.route('/',methods=['POST','GET'])
-@app.route('/Master/login',methods=['POST','GET'])
+@app.route('/')
+@app.route('/Master/Dashboard/')
 def login():
     pageContent = {
         "title": "GGC - DASHBOARD"
