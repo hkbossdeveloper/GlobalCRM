@@ -2,7 +2,72 @@
 {% block title  %} {{ pageContent.title }} {% endblock %}
 {% block content %}
 
-<div class="container-fluid">
-
+<div class="container-fluid" style="padding:0;overflow: hidden;">
+ <div class="row">
+     <div class="col-sm-12 col-md-4 t1" >
+        <div class="card" style="margin:2%">
+            <h5 class="card-header">Employees</h5>
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Create</a>
+              <a href="#" class="btn btn-primary">List</a>
+              <a href="#" class="btn btn-primary">Attendace</a>
+            </div>
+          </div>
+     </div>
+     <div class="col-sm-12 col-md-4 t1" >
+        <div class="card" style="margin-top:1%">
+            <h5 class="card-header">Leads</h5>
+            <div class="card-body">
+              <a href="#" class="btn btn-primary mt-1">Create Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Facebook lead</a>
+              <a href="#" class="btn btn-primary mt-1">Google Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Instagram Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Walk Ins Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Through Telephone Lead</a>
+              <a href="#" class="btn btn-primary mt-1">LinkedIn Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Seminar Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Field Activity Lead</a>
+              <a href="#" class="btn btn-primary mt-1">SMS Campaign Lead</a>
+              <a href="#" class="btn btn-primary mt-1">WhatsApp campaign Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Cold Calling Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Client Referral Lead</a>
+              <a href="#" class="btn btn-primary mt-1">Employee Referral Lead</a>
+              <a href="#" class="btn btn-primary mt-1">News paper Ads/Flyers Lead</a>
+            </div>
+          </div>
+     </div>
+     <div class="col-sm-12 col-md-4 t1" >
+        <div class="card" style="margin-top:1%">
+            <h5 class="card-header">Applicants</h5>
+            <div class="card-body">
+              <a href="#" class="btn btn-primary mt-1 ">List Applicants</a>
+              <a href="#" class="btn btn-primary mt-1">Shortlist Applicants</a>
+              <a href="#" class="btn btn-primary mt-1">Cancel Applicants</a>
+              <a href="#" class="btn btn-primary mt-1">Pending Applicants</a>
+            </div>
+          </div>
+     </div>
+ </div>
+ <div class="row">
+    <div class="col-sm-12 col-md-3 t1" ></div>
+    <div class="col-sm-12 col-md-6 t1" ></div>
+    <div class="col-sm-12 col-md-3 t1" ></div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-3 t1" ></div>
+    <div class="col-sm-12 col-md-6 t1" ></div>
+    <div class="col-sm-12 col-md-3 t1" ></div>
+</div>
+<style>
+    .t1{
+        background-image: url('/static/images/t1.jpg');
+        background-attachment: fixed;
+        max-height: 300px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    </style>
 </div>
 {% endblock %}
