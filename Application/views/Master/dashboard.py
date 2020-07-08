@@ -10,3 +10,12 @@ def login():
     }
     return render_template('Master/Dashboard.html' , pageContent=pageContent)
 
+
+
+@app.route('/Master/Dashboard/Employee/Create/')
+def emp_create():
+    pageContent = {
+        "title": "GGC - Employee Create"
+    }
+    return render_template('Master/Employee_create.html' , pageContent=pageContent)
+

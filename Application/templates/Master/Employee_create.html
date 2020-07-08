@@ -1,0 +1,89 @@
+{% extends '/Master/Base_Master.html' %}
+{% block title  %} {{ pageContent.title }} {% endblock %}
+{% block content %}
+
+<div class="container">
+
+  <div class="main mt-5">
+    <h1 style="margin:3% 0% 3% 0%">Create Employee</h1>
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputFullName" class="form-label">Good Name</label>
+          <input type="text" class="form-control" id="inputFullName">
+        </div>
+        <div class="col-md-6">
+          <label for="InputDepart" class="form-label">Department</label>
+          <select id="InputDepart" name="Departments" class="form-control">
+              <option>Select Departments</option>
+              <option value="0">IT</option>
+              <option value="1">Marketing</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputSalary" class="form-label">Salary</label>
+            <input type="input" class="form-control" id="inputSalary">
+          </div>
+          <div class="col-md-4">
+            <label for="inputContract" class="form-label">Employee Type</label>
+            <select id="inputContract" name="ContractType" class="form-control">
+                <option>Select Type</option>
+                <option value="0">Contract</option>
+                <option value="1">Monthly</option>
+                <option value="2">Permanent</option>
+                <option value="3">Internship</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputContractmonths" class="form-label">Type Years</label>
+            <select id="inputContractmonths" name="ContractYears" class="form-control">
+                <option>Select years</option>
+                <option value="0">1</option>
+                <option value="1">2</option>
+            </select>
+          </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+             Print Out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Create Employee</button>
+        </div>
+      </form>
+  </div>
+</div>
+{% endblock %}
