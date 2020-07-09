@@ -1,0 +1,85 @@
+{% extends '/Master/Base_Master.html' %}
+{% block title  %} {{ pageContent.title }} {% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="main" style="margin-top: 2%;">
+        <h1 style="margin-bottom: 2%;">Employees Reports</h1>
+        <form class="row gy-2 gx-3 align-items-center">
+            <div class="col-auto">
+              <label class="sr-only" for="Year">Month</label>
+              <select id="Year" name="year" class="form-control">
+                  <option value="JANUARY">Jan</option>
+                  <option value="FEBRUARY">Feb</option>
+                  <option value="MARCH">Mar</option>
+                  <option value="APIRL">Api</option>
+                  <option value="MAY">May</option>
+                  <option value="JUNE">Jun</option>
+                  <option value="JULY">Jul</option>
+                  <option value="AUGUST">Aug</option>
+                  <option value="SEPTEMBER">Sep</option>
+                  <option value="OCTUBER">Oct</option>
+                  <option value="NOVEMBER">Nov</option>
+                  <option value="DECEMBER">Dec</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <a href="#" class="btn btn-success">Download Current Year Report</a>
+            </div>
+          </form>
+          <p class="text-danger mt-2">THIS FORM CAN GENERATE ONLY CURRENT YEAR REPORT... IF YOU WANT  ADVANCE REPORT CLICK HERE !  <a href="#">ADVANCE REPORT</a></p>
+    <table id="example" class="table table-striped table-bordered" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>View</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hamza Khan</td>
+                <td>System Architect</td>
+                <td>Male</td>
+                <td>21</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+                <td><a href="" class="btn btn-primary">View Profile</a></td>
+            </tr>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>View</th>
+            </tr>
+        </tfoot>
+    </table>
+</div> 
+
+
+</div> 
+<script>
+    function startTime(){
+        jQuery('#example').DataTable({
+            
+        });
+        $('#min').keyup( function() { table.draw(); } );
+        $('#max').keyup( function() { table.draw(); } );
+    } ;
+</script>
+
+
+
+
+{% endblock %}

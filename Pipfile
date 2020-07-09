@@ -13,6 +13,8 @@ requests = "*"
 werkzeug = "*"
 bson = "*"
 dnspython = "*"
+pdfkit = "*"
+wkhtmltopdf = "*"
 
 [requires]
 python_version = "3.8"
