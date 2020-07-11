@@ -10,6 +10,7 @@
         function generatePDF() {
           // Choose the element that our invoice is rendered in.
           const element = document.getElementById("invoice");
+
           // Choose the element and save the PDF for our user.
           html2pdf()
             .from(element)
@@ -21,16 +22,15 @@
 
     <title>{{ title }}</title>
   </head>
-  <body>
+  <body >
     
-   <div class="container mt-5">
-    <button onclick="generatePDF()" class="btn btn-primary">Download as PDF</button>
-       <div class="row"  id="invoice">
+   <div class="container mt-5" id="invoice">
+       <div class="row"  >
            <div class="col-md-6">
                <img src="{{ url_for('static', filename='images/main_logo.png') }}" width="250px" height="200px"/>
            </div>
            <div class="col-md-6 mt-3">
-            <h1>Employees Contact Report</h1>
+            <h1 style="font-size: 2.0rem; ">Employees Contact Report</h1>
             <h3>Year {{ pageContent.currentyear }}</h3>
             <h5>Address : Main Sultan Qaboos Street, Al Khuwair , Muscat – Oman</h5>
             <h5>Email : info@globalgatewayconsult.com</h5>
@@ -50,6 +50,213 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Hamza Khan</td>
+                        <td>System Architect</td>
+                        <td>Male</td>
+                        <td>Hamza923@live.com</td>
+                        <td>03162400202</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
                     <tr>
                         <td>Hamza Khan</td>
                         <td>System Architect</td>
