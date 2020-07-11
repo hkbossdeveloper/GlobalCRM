@@ -17,8 +17,8 @@ def reports_download():
     }
     x = datetime.datetime.now()
     pageContent['currentyear'] = x.year
-    rendered = render_template('Master/download_emp_current.html' , pageContent=pageContent)
-    return pdfkit.from_string(rendered,"Hello.pdf")
+    return render_template('Master/download_emp_current.html' , pageContent=pageContent)
+
     # response = make_response(pdf)
     # response.headers['Content-Type'] = 'application/pdf'
     # response.headers['Content-Disposition'] = 'inline; filename=EmployeeReports.pdf'

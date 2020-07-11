@@ -5,14 +5,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="{{ url_for('static',filename='js/pdf.js') }}"></script>
+    <script>
+        function generatePDF() {
+          // Choose the element that our invoice is rendered in.
+          const element = document.getElementById("invoice");
+          // Choose the element and save the PDF for our user.
+          html2pdf()
+            .from(element)
+            .save();
+        }
+      </script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
     <title>{{ title }}</title>
   </head>
   <body>
+    
    <div class="container mt-5">
-       <div class="row">
+    <button onclick="generatePDF()" class="btn btn-primary">Download as PDF</button>
+       <div class="row"  id="invoice">
            <div class="col-md-6">
                <img src="{{ url_for('static', filename='images/main_logo.png') }}" width="250px" height="200px"/>
            </div>
@@ -23,6 +36,7 @@
             <h5>Email : info@globalgatewayconsult.com</h5>
         </div>
         <div class="col-md-12">
+            <h5>New Employees : 1</h5>
             <table class="table table-striped table-bordered mt-4" style="width:100%;">
                 <thead>
                     <tr>
