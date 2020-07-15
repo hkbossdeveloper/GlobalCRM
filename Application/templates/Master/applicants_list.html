@@ -1,0 +1,48 @@
+{% extends '/Master/Base_Master.html' %}
+{% block title  %} {{ pageContent.title }} {% endblock %}
+{% block content %}
+
+<div class="container">
+
+  <div class="main mt-5">
+    <h1 style="margin:3% 0% 3% 0%">Create Lead</h1>
+    <form class="row g-3">
+        <div class="col-md-12">
+          <label for="InputDepart" class="form-label">Type</label>
+          <select id="InputDepart" name="type" class="form-control">
+              <option>Select Departments</option>
+              <option value="WEB">Website</option>
+              <option value="FACEBOOK">Facebook</option>
+              <option value="INSTAGRAM">Instagram</option>
+              <option value="GOOGLEADS">Google Ads</option>
+              <option value="WALKINS">Walk Ins</option>
+              <option value="PHONE">Phone</option>
+              <option value="SEMINAR">Seminar</option>
+              <option value="ACTIVITY">Field Activity</option>
+              <option value="SMS">SMS</option>
+              <option value="WHATSAPP">WhatsApp</option>
+              <option value="CALLING">Calling</option>
+              <option value="CLIREFERRAL">Client Referral</option>
+              <option value="EMPREFERRAL">Employee Referral</option>
+              <option value="PAPER">News paper Ads/Flyers</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="InputName" class="form-label">Enter Good Name</label>
+          <input type="text" class="form-control" id="InputName">
+        </div>
+        <div class="col-md-4">
+          <label for="InputCell" class="form-label">Enter Cell Number</label>
+          <input type="text" class="form-control" id="InputCell">
+        </div>
+        <div class="col-md-4">
+          <label for="InputEmail" class="form-label">Enter Email</label>
+          <input type="Email" class="form-control" id="InputEmail">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Create Lead</button>
+        </div>
+      </form>
+  </div>
+</div>
+{% endblock %}

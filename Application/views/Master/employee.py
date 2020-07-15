@@ -19,8 +19,16 @@ def reports_download():
     pageContent['currentyear'] = x.year
     return render_template('Master/download_emp_current.html' , pageContent=pageContent)
 
-    # response = make_response(pdf)
-    # response.headers['Content-Type'] = 'application/pdf'
-    # response.headers['Content-Disposition'] = 'inline; filename=EmployeeReports.pdf'
-    # return response
+@app.route('/Master/Dashboard/Employee/Attend')
+def emp_attend():
+    pageContent = {
+        "title": "GGC - Employee Reports 2020"
+    }
+    x = datetime.datetime.now()
+    pageContent['currentyear'] = x.year
+    pageContent['currentmonth'] = x.month
+    pageContent['currentday'] = x.day
+    return render_template('Master/attendence_master.html' , pageContent=pageContent)
+
+
 
