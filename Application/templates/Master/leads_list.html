@@ -20,117 +20,36 @@
             </tr>
         </thead>
         <tbody>
+            {% for X in pageContent.Lists %}
+            
+
             <tr>
-                <td>Hamza Khan</td>
-                <td>03162400202</td>
-                <td>hamza923@live.com</td>
-                <td>Facebook</td>
+                <td>{{ X.GNAME }}</td>
+                <td>{{ X.GCELL }}</td>
+                <td>{{ X.GEMAIL }}</td>
+                <td>{{ X.TYPE }}</td>
                 <td>
-                    <a href="" class="btn btn-primary">Selected To Call</a>
-                    <a href="" class="btn btn-primary">Selected To Email</a>
-                    <a href="" class="btn btn-primary">Pending</a>
+                    <a href="" class="btn btn-primary">Selected To Applicants</a>
+                    <a href="" class="btn btn-primary">Other</a>
                     <a href="" class="btn btn-primary">Cancel</a>
                 </td>
-                <td>10-10-2020</td>
-                <td>Action Not Taken</td>
+                <td>{{ X.Created }}</td>
+                <td>{{ X.STATUS }}</td>
             </tr>
+
+
+            {% endfor %}
+            
+        </tbody>
+        <tfoot>
             <tr>
-                <td>Raza Khan</td>
-                <td>03356096667</td>
-                <td>xodeac-cc@outlook.com</td>
-                <td>Whatsapp</td>
-                <td>
-                    <a href="" class="btn btn-primary">Selected To Call</a>
-                    <a href="" class="btn btn-primary">Selected To Email</a>
-                    <a href="" class="btn btn-primary">Pending</a>
-                    <a href="" class="btn btn-primary">Cancel</a>
-                </td>
-                <td>11-10-2020</td>
-                <td>Action Not Taken</td>
-            </tr>
-            <tr>
-                <td>Raza Khan</td>
-                <td>03356096667</td>
-                <td>xodeac-cc@outlook.com</td>
-                <td>Instagram</td>
-                <td>
-                    <a href="" class="btn btn-primary">Selected To Call</a>
-                    <a href="" class="btn btn-primary">Selected To Email</a>
-                    <a href="" class="btn btn-primary">Pending</a>
-                    <a href="" class="btn btn-primary">Cancel</a>
-                </td>
-                <td>20-10-2020</td>
-                <td>Action Not Taken</td>
-            </tr>
-            <tr>
-                <td>Raza Khan</td>
-                <td>03356096667</td>
-                <td>xodeac-cc@outlook.com</td>
-                <td>Papers</td>
-                <td>
-                    <a href="" class="btn btn-primary">Selected To Call</a>
-                    <a href="" class="btn btn-primary">Selected To Email</a>
-                    <a href="" class="btn btn-primary">Pending</a>
-                    <a href="" class="btn btn-primary">Cancel</a>
-                </td>
-                <td>11-10-2020</td>
-                <td>Action Not Taken</td>
-            </tr>
-            <tr>
-                <td>Raza Khan</td>
-                <td>03356096667</td>
-                <td>xodeac-cc@outlook.com</td>
-                <td>Seminar</td>
-                <td>
-                    <a href="" class="btn btn-primary">Selected To Call</a>
-                    <a href="" class="btn btn-primary">Selected To Email</a>
-                    <a href="" class="btn btn-primary">Pending</a>
-                    <a href="" class="btn btn-primary">Cancel</a>
-                </td>
-                <td>11-10-2020</td>
-                <td>Action Not Taken</td>
-            </tr>
-            <tr>
-                <td>Raza Khan</td>
-                <td>03356096667</td>
-                <td>xodeac-cc@outlook.com</td>
-                <td>Activity</td>
-                <td>
-                    <a href="" class="btn btn-primary">Selected To Call</a>
-                    <a href="" class="btn btn-primary">Selected To Email</a>
-                    <a href="" class="btn btn-primary">Pending</a>
-                    <a href="" class="btn btn-primary">Cancel</a>
-                </td>
-                <td>11-10-2020</td>
-                <td>Action Not Taken</td>
-            </tr>
-            <tr>
-                <td>Raza Khan</td>
-                <td>03356096667</td>
-                <td>xodeac-cc@outlook.com</td>
-                <td>SMS</td>
-                <td>
-                    <a href="" class="btn btn-primary">Selected To Call</a>
-                    <a href="" class="btn btn-primary">Selected To Email</a>
-                    <a href="" class="btn btn-primary">Pending</a>
-                    <a href="" class="btn btn-primary">Cancel</a>
-                </td>
-                <td>11-10-2020</td>
-                <td>Action Not Taken</td>
-            </tr>
-            <tr>
-                <td>Raza Khan</td>
-                <td>03356096667</td>
-                <td>xodeac-cc@outlook.com</td>
-                <td>Client Referral</td>
-                <td>
-                    <a href="" class="btn btn-primary">Selected To Call</a>
-                    <a href="" class="btn btn-primary">Selected To Email</a>
-                    <a href="" class="btn btn-primary">Pending</a>
-                    <a href="" class="btn btn-primary">Cancel</a>
-                </td>
-                <td>11-10-2020</td>
-                <td>Action Not Taken</td>
+                <th>Name</th>
+                <th>Cell</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>Action</th>
+                <th>Date</th>
+                <th>Status</th>
             </tr>
         </tfoot>
     </table>

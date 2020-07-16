@@ -6,10 +6,10 @@
 
   <div class="main mt-5">
     <h1 style="margin:3% 0% 3% 0%">Create Lead</h1>
-    <form class="row g-3">
+    <form class="row g-3" action="/Master/Dashboard/Leads/Create/POST/" method="POST">
         <div class="col-md-12">
           <label for="InputDepart" class="form-label">Type</label>
-          <select id="InputDepart" name="type" class="form-control">
+          <select id="InputDepart"  name="type" class="form-control">
               <option>Select Departments</option>
               <option value="WEB">Website</option>
               <option value="FACEBOOK">Facebook</option>
@@ -29,15 +29,15 @@
         </div>
         <div class="col-md-4">
           <label for="InputName" class="form-label">Enter Good Name</label>
-          <input type="text" class="form-control" id="InputName">
+          <input type="text" name="gname" class="form-control" id="InputName">
         </div>
         <div class="col-md-4">
           <label for="InputCell" class="form-label">Enter Cell Number</label>
-          <input type="text" class="form-control" id="InputCell">
+          <input type="text" name="gcell" class="form-control" id="InputCell">
         </div>
         <div class="col-md-4">
           <label for="InputEmail" class="form-label">Enter Email</label>
-          <input type="Email" class="form-control" id="InputEmail">
+          <input type="Email" name="gemail" class="form-control" id="InputEmail">
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-primary">Create Lead</button>
