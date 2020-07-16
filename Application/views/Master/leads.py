@@ -9,3 +9,12 @@ def leads_create():
         "title": "GGC - LEADS PANEL"
     }
     return render_template('Master/create_leads.html', pageContent=pageContent)
+
+
+
+@app.route('/Master/Dashboard/Leads/List/')
+def leads_list():
+    pageContent = {
+        "title": "GGC - LEADS LIST"
+    }
+    return render_template('Master/leads_list.html', pageContent=pageContent)
